@@ -1,5 +1,5 @@
 ![](https://github.com/Marcos314/Pibiti_2019/blob/master/banner%20tcc.jpg)
-# Pibiti_2019
+# TCC 2020
 Modelo computacional para identificar movimentos migratórios de populações de baixa renda
 
 # Instruções para execução do docker-compose
