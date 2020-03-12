@@ -20,7 +20,7 @@ class BolsaFamilia:
         for filename in files:
             filename = 'dados/' + filename
             print(filename)
-            for dataframe in pd.read_csv( filename, sep=";", chunksize=10 ** 6):
+            for dataframe in pd.read_csv( filename, sep=";", chunksize=10 ** 6, low_memory = False):
                 for index, linha in dataframe.iterrows():
                         sys.stdout.write('.')
                         tx = self.GRAPH.begin()

@@ -1,0 +1,8 @@
+Cidade de estudo: Formosa-GO
+
+#Query referente a qntd de registros por cidade
+
+MATCH (b:Beneficiario)-[:RECEBEU]-(p:Pagamento) WHERE p.nomeMunicipio='FORMOSA' RETURN p.nomeMunicipio, p.mesReferencia, count(p.nomeMunicipio) AS qtd_familias
+
+MATCH (b:Beneficiario)-[:RECEBEU]-(p:Pagamento) WHERE p.nomeMunicipio='BRASILIA' RETURN p.nomeMunicipio, p.mesCompetencia, count(p.nomeMunicipio) AS qtd_familias
+
