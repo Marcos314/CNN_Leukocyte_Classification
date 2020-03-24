@@ -15,12 +15,14 @@ class BolsaFamilia:
         self.GRAPH.run("MATCH (n) DETACH DELETE n;")
 
     def loadDatabase(self):
-        files = [f for f in os.listdir("/home/script/dados") if f.startswith('201401') and f.endswith('.csv')]
+        
+        files = [f for f in os.listdir("/home/script/dados") if f.startswith('2015') and f.endswith('.csv')]
+        
         #print(files)
         for filename in files:
             filename = 'dados/' + filename
             print(filename)
-            for dataframe in pd.read_csv( filename, sep=";", chunksize=10 ** 6, low_memory = False):
+            for dataframe in pd.read_csv( filename, sep=";", chunksize=10 ** 2, low_memory = False):
                 for index, linha in dataframe.iterrows():
                         sys.stdout.write('.')
                         tx = self.GRAPH.begin()
