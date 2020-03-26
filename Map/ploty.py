@@ -1,13 +1,15 @@
 import plotly.graph_objects as go
 import pandas as pd
 
-df = pd.read_csv('/home/marcos/Desktop/TCC_2020/municipios.csv')
+df = pd.read_csv('/home/marcos/Desktop/LAB1_BF.csv')
 df.head()
 
-df['text'] = df['nome'] + '<br>Population ' + (df['pop']/1e6).astype(str)+' million'
-limits = [(0,2),(3,10),(11,20),(21,50),(50,3000)]
-colors = ["royalblue","crimson","lightseagreen","orange","lightgrey"]
-cities = ['Formosa']
+
+df['text'] = df['uf'] + '<br>Qtd pagamentos: ' + (df['pgt_realizados']/1e3).astype(str) + 'mil'
+#qtd estados em determinada situação
+limits = [(0,2),(3,14),(15,21),(21,28)]
+colors = ["royalblue","crimson","lightseagreen","orange"]
+cities = ['acre','brasilia']
 
 
 fig = go.Figure()
@@ -15,19 +17,20 @@ fig = go.Figure()
 for i in range(len(limits)):
     lim = limits[i]
     df_sub = df[lim[0]:lim[1]]
+    #print(df_sub)    
     fig.add_trace(go.Scattergeo(
-        locations = ["Brazil"],
-        locationmode = 'country names',
+        #locations = ["Brazil"],
+        locationmode = 'USA-states',
         #locationmode = 'USA-states',
         lon = df_sub['lon'],
         lat = df_sub['lat'],
         text = df_sub['text'],
         marker = dict(
-            size = df_sub['pop'],
+            size = df_sub['pgt_realizados']/27,
             color = colors[i],
             line_color='rgb(40,40,40)',
             line_width=0.5,
-            sizemode = 'area'
+            sizemode = 'area'            
         ),
         name = '{0} - {1}'.format(lim[0],lim[1])))
 

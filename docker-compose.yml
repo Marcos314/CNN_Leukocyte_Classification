@@ -2,10 +2,12 @@ version: '3'
 services:
 
     script:
+        # build . aponta para a pasta onde contem o dockerfile a ser construida
         build: .
         volumes:
+        # esquerda = host
             - ./:/home/script
-        command: python3 scripts/script_popula_neo4j.py                
+        command: python3 script_popula_neo4j.py                
     neo4j:
         image: neo4j:latest
         ports:
