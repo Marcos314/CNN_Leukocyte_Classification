@@ -14,10 +14,13 @@ services:
             - '7474:7474'
             - '7687:7687'
         volumes:
+            - $HOME/neo4j/conf:/conf           
             - $HOME/neo4j/neo4j-core1/data:/data
+            - $HOME/neo4j/import:/import
 
         environment:
-            NEO4J_AUTH: none
+            NEO4J_AUTH: neo4j/45l69k
+            #NEO4J_dbms_security_procedures_unrestricted: apoc.*,algo.*                
             #NEO4J_dbms_connectors_default__listen__address: 0.0.0.0
 
 
