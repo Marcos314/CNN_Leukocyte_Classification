@@ -1,7 +1,7 @@
-# TCC 2020
+# Repositório de códigos do TCC de Marcos Wesley
 
 
-### Insyalação do ambiente com conda
+## Instalação do ambiente com conda
 
 #### Criação do ambiente virtual (executar apenas uma vez)
 `conda create -n machine-learning python=3.6`
@@ -17,3 +17,12 @@
 #### Sair do ambiente virtual
 
 `conda deactivate`	
+
+
+## Dataset utilizado
+
+Dataset original: https://github.com/Shenggan/BCCD_Dataset
+
+O dataset original foi modificado e expandido com o notebook CriacaoDoNovoDataset.ipynb
+
+Este novo dataset será migrado para um plataforma livre após finalizar o TCC com a mesma licença do original (MIT).
