@@ -30,15 +30,18 @@ from keras.initializers import he_normal
 from keras.layers import Lambda, SeparableConv2D, BatchNormalization, Dropout, MaxPooling2D, Input, Dense, Conv2D, Activation, Flatten 
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 
+
+print(os.getcwd())
 """Normalização e Input dos dados"""
 # Função recebe o path relativo onde se encontra imagens e retorna-as em 2 arrays: images e labels
-def loadDataset(train_path,valid_path,test_path):
-    datasets = ['train_path','valid_path','test_path']
+def loadDataset(train_path, valid_path, test_path):
+    datasets = [train_path, valid_path, test_path]
     images = []
     labels = []
     image_size = (150,150)
     # iterar nos datasets de treino e validação
     for dataset in datasets:
+        print(dataset)
         # iterar nas subpastas dos datasets
         for folder in os.listdir(dataset):
             if   folder in ['eosinofilo']: label = 0
@@ -62,7 +65,7 @@ def loadDataset(train_path,valid_path,test_path):
     return images, labels
 
 # # Combinar todas as imagens originais em um único dataset
-images, labels = loadDataset('../dataset/blood/blood_input_as_zip/train','../dataset/blood/blood_input_as_zip/valid','../dataset/blood/blood_input_as_zip/test')
+images, labels = loadDataset('/array/marcos314/TCC_2020/dataset/train/','/array/marcos314/TCC_2020/dataset/valid/','/array/marcos314/TCC_2020/dataset/test/')
 
 # Embaralhar os dados e separar novos conjuntos de  treinamento (80%), validação (10%) e teste (10%)
 images, labels = shuffle(images, labels, random_state=10)
@@ -190,11 +193,11 @@ def plotAccucaria(history):
     ax[1].legend()
     ax[1].set_xlabel("Épocas")
     ax[1].set_ylabel("Perdas")
-    plt.savefig('/home/marcos/TCC_2020/pictures/train_valid_acc.png', dpi=300, figsize=(9,5))
+    plt.savefig('../pictures/train_valid_acc.png', dpi=300, figsize=(9,5))
     
 
 # Usando a função plotAcuracia
-plotAccucaria(history)
+# plotAccucaria(history)
 
 print('\n========= Resultados do Treinamento da CNN\n')
 # Resultados do treinamento da CNN
@@ -202,8 +205,12 @@ results = buildModel().evaluate(test_images, test_labels)
 print("Perda do modelo = ", results[0])
 print("Acurácia do modelo = ", results[1]*100, "%")
 
+
+
+
+
 # # Salvar o modelo
-model.save('BloodModel.h5')
+#model.save('BloodModel.h5')
 
 # from sklearn.metrics import classification_report
 
