@@ -169,31 +169,32 @@ def buildModel():
 
 
 # Avaliação dp desempenh da CNN
-# def plotAccucaria(history):
-#     epochs = [i for i in range(10)]
-#     fig , ax = plt.subplots(1,2)
-#     train_acc = history.history['accuracy']
-#     train_loss = history.history['loss']
-#     val_acc = history.history['val_accuracy']
-#     val_loss = history.history['val_loss']
-#     fig.set_size_inches(20,10)
-#     ax[0].plot(epochs , train_acc , 'go-' , label = 'Acurácia de treinamento')
-#     ax[0].plot(epochs , val_acc , 'ro-' , label = 'Acurária de validação')
-#     ax[0].set_title('Acurácia de treinamento e validação')
-#     ax[0].legend()
-#     ax[0].set_xlabel("Épocas")
-#     ax[0].set_ylabel("Acurácia")
+def plotAccucaria(history):
+    epochs = [i for i in range(10)]
+    fig , ax = plt.subplots(1,2)
+    train_acc = history.history['accuracy']
+    train_loss = history.history['loss']
+    val_acc = history.history['val_accuracy']
+    val_loss = history.history['val_loss']
+    fig.set_size_inches(20,10)
+    ax[0].plot(epochs , train_acc , 'go-' , label = 'Acurácia de treinamento')
+    ax[0].plot(epochs , val_acc , 'ro-' , label = 'Acurária de validação')
+    ax[0].set_title('Acurácia de treinamento e validação')
+    ax[0].legend()
+    ax[0].set_xlabel("Épocas")
+    ax[0].set_ylabel("Acurácia")
 
-#     ax[1].plot(epochs , train_loss , 'g-o' , label = 'Perda no treinamento')
-#     ax[1].plot(epochs , val_loss , 'r-o' , label = 'Perda na validação')
-#     ax[1].set_title('Perdas no treinamento e validação')
-#     ax[1].legend()
-#     ax[1].set_xlabel("Épocas")
-#     ax[1].set_ylabel("Perdas")
-#     plt.show()
+    ax[1].plot(epochs , train_loss , 'g-o' , label = 'Perda no treinamento')
+    ax[1].plot(epochs , val_loss , 'r-o' , label = 'Perda na validação')
+    ax[1].set_title('Perdas no treinamento e validação')
+    ax[1].legend()
+    ax[1].set_xlabel("Épocas")
+    ax[1].set_ylabel("Perdas")
+    plt.savefig('/home/marcos/TCC_2020/pictures/train_valid_acc.png', dpi=300, figsize=(9,5))
+    
 
-# # Usando a função plotAcuracia
-# plotAccucaria(history)
+# Usando a função plotAcuracia
+plotAccucaria(history)
 
 print('\n========= Resultados do Treinamento da CNN\n')
 # Resultados do treinamento da CNN
