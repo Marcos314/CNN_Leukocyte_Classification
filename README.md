@@ -12,7 +12,7 @@
 
 #### Instalação dos pacotes necessários (apenas na primeira vez que entrar no ambiente)
 
-`conda install pandas numpy tensorflow keras pillow scikit-learn jupyterlab`
+`conda install pandas numpy tensorflow keras pillow scikit-learn jupyterlab matplotlib opencv-python seaborn`
 
 #### Sair do ambiente virtual
 
