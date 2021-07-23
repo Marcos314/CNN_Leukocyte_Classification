@@ -14,6 +14,10 @@
 
 `conda install pandas numpy tensorflow keras pillow scikit-learn jupyterlab`
 
+`conda install -c conda-forge matplotlib opencv tqdm`
+
+`conda install -c anaconda seaborn`
+
 #### Sair do ambiente virtual
 
 `conda deactivate`	
