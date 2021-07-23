@@ -10,13 +10,25 @@
 
 `conda activate machine-learning`
 
+
 #### Instalação dos pacotes necessários (apenas na primeira vez que entrar no ambiente)
 
-`conda install pandas numpy tensorflow keras pillow scikit-learn jupyterlab`
+1. Pode ser feito de uma vez usando:
+```Bash
+conda env create -f environment.yml
 
-`conda install -c conda-forge matplotlib opencv tqdm`
+```
 
-`conda install -c anaconda seaborn`
+2. Pode ser feito separadamente, usando:
+
+```Bash
+conda install pandas numpy tensorflow keras pillow scikit-learn jupyterlab -y
+
+conda install -c conda-forge matplotlib opencv tqdm -y
+
+conda install -c anaconda seaborn -y
+
+```
 
 #### Sair do ambiente virtual
 
