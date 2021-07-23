@@ -1,18 +1,26 @@
-## Obtenção de sequêncas
-
-Para obter o arquivo mature.fa que tem algumas sequências de mirna's foi usado o link: http://www.mirbase.org/ftp.shtml
-
-Esse arquivo será carregado e uma verificação com os mirna's que temos como objetivo estudar será feito com a finalidade de criar uma nova variável no dataset que vai conter as sequências.
-
-- Criação de um dataframe a partir de duas listas (id e seq).
+## Informações sobre o dataset
+Total de imagens no dataset original: 366
 
 
-|id  |sequencia  |
-|---------|---------|
-|mdo-miR-7371l-3p     |   AACGUUGCAUCUUGUACAAUAGU      |
-|mdo-miR-7371p-5p     |   UUUGCACAAGGUGCUCUAUUCUGU     |
-|mdo-miR-7375d-3p     |   UAGGGCGGGGAAAGGCAUUG         |
+## Ambiente local
+- Criação de ambiente local
+
+    `conda create -n deep_learning python=3.6`
 
 
-## Referencia Teórico
+- Ativar ambiente de execução local
+
+    `conda activate deep_learnin`
+
+- Instalar bibliotecas
+
+    `pip install requirements.txt`
+
+
+## Acessando servidor
+
+        maq1: ssh marcos314@164.41.254.3 -p 13508
+        maq2: ssh marcos314@dna
+        password: marcos314
+
 

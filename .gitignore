@@ -5,4 +5,6 @@ R
 notebooks/images_sequence_logo
 notebooks/images_sequence_qrcode
 dataset
+dataset_original
 archive
+anotacoes.md
