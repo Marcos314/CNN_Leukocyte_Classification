@@ -1,4 +1,0 @@
-matplotlib==3.3.4
-opencv-python==4.5.2.54
-tqdm @ file:///tmp/build/80754af9/tqdm_1602185206534/work
-seaborn==0.11.1
