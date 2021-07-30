@@ -180,7 +180,7 @@ def buildModel():
     model.compile(optimizer = "adam" , loss = 'sparse_categorical_crossentropy' , metrics = ['accuracy'])
     
     # Callback
-    checkpoint = ModelCheckpoint(filepath='blood_model_epochs_10.hdf5', save_best_only=True, save_weights_only=False)
+    checkpoint = ModelCheckpoint(filepath='blood_model_check_point_epochs_10.hdf5', save_best_only=True, save_weights_only=False)
     early_stop = EarlyStopping(monitor='val_loss', min_delta=0.1, patience=3, verbose = 1, mode='min', restore_best_weights = True)
     learning_rate_reduction = ReduceLROnPlateau(
         monitor = 'val_accuracy', 
@@ -197,6 +197,8 @@ def buildModel():
         epochs = 10, 
         validation_data=(val_images, val_labels), 
         callbacks=[learning_rate_reduction])
+
+    model.save('BloodModel_29_JUL_eXception_completa.h5')
 
     return model
 
@@ -240,7 +242,7 @@ print("Acurácia do modelo = ", results[1]*100, "%")
 
 
 # # Salvar o modelo
-#model.save('BloodModel.h5')
+# model.save('BloodModel_29_JUL_eXception_completa.h5')
 
 # from sklearn.metrics import classification_report
 
