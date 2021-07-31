@@ -1,10 +1,13 @@
-dados
-praticaBlast
-artigos
-R
-notebooks/images_sequence_logo
-notebooks/images_sequence_qrcode
+## Dados
+archive
 dataset
 dataset_original
-archive
+
+## Imagens
+notebooks/images_sequence_logo
+notebooks/images_sequence_qrcode
+
+## Aleatórios
 anotacoes.md
+*.hdf5
+*.zip
