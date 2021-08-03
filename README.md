@@ -39,6 +39,13 @@ conda install -c anaconda seaborn -y
 
 Dataset original: https://github.com/Shenggan/BCCD_Dataset
 
-O dataset original foi modificado e expandido com o notebook CriacaoDoNovoDataset.ipynb
+O dataset original foi usado como única fonte de imagens, removendo as classes não estudadas. Os tipos de células que foram estudadas são:
+
+- **Basófilos**
+- **Leucócitos**
+- **Neutrófilos**
+- **Eosinófilos**
+- **Monócitos**
+
 
 Este novo dataset será migrado para um plataforma livre após finalizar o TCC com a mesma licença do original (MIT).
