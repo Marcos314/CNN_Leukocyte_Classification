@@ -270,3 +270,4 @@ print("Acurácia do modelo = ", results[1]*100, "%")
 #         yticklabels = class_names)
     
 # plot_confusion_matrix(cm)
+
