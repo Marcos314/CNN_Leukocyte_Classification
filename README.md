@@ -37,7 +37,7 @@ conda install -c anaconda seaborn -y
 
 ## Dataset utilizado
 
-Dataset original: https://github.com/Shenggan/BCCD_Dataset
+Dataset original: https://data.mendeley.com/datasets/snkd93bnjr/1
 
 O dataset original foi usado como única fonte de imagens, removendo as classes não estudadas. Os tipos de células que foram estudadas são:
 
@@ -47,5 +47,5 @@ O dataset original foi usado como única fonte de imagens, removendo as classes 
 - **Eosinófilos**
 - **Monócitos**
 
+Este novo dataset será migrado para um plataforma livre após finalizar o TCC com a mesma licença do original (CC BY 4.0).
 
-Este novo dataset será migrado para um plataforma livre após finalizar o TCC com a mesma licença do original (MIT).
