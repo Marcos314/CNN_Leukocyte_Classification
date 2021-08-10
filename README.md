@@ -1,7 +1,9 @@
-# Repositório de códigos do TCC de Marcos Wesley
+# :microscope: Classificação de Leucócitos Utilizando Redes neurais Convolucionais 
 
+## :alien: Autor: [Marcos Wesley](https://github.com/Marcos314)
+## :alien: Orientador: [Waldeyr Mendes Cordeiro da Silva](https://gist.github.com/waldeyr)
 
-## Instalação do ambiente com conda
+## :point_right: Instalação do ambiente com conda
 
 #### Criação do ambiente virtual (executar apenas uma vez)
 `conda create -n machine-learning python=3.6`
@@ -35,7 +37,7 @@ conda install -c anaconda seaborn -y
 `conda deactivate`	
 
 
-## Dataset utilizado
+## :point_right: Dataset utilizado
 
 Dataset original: https://data.mendeley.com/datasets/snkd93bnjr/1
 
